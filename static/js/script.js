@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then((data) => {
                 if (data.success) {
                     chatMessages.innerHTML = "";
-                    data.conversation_history.forEach((message) => {
+                    data.conversation_history.map((message) => {
                         addMessage(message.role, message.content);
                     });
                 } else {
